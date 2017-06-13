@@ -28,19 +28,19 @@ using namespace imagelab;
 //    setBlue
 void test_basic_functionality()
 {
+	//Testing the default constructor
+   Pixel t4;
+   assert (t4.getRed() == 0);
+   assert (t4.getGreen() == 0);
+   assert (t4.getBlue() == 0);
+   cout << "\tDefault constructor is working properly!\n";
+
    //Testing the constructor (and get functions) with 3 arguments
    Pixel t2(200,15,35);
    assert (t2.getRed() == 200);
    assert (t2.getGreen() == 15);
    assert (t2.getBlue() == 35);
    cout << "\tConstructor is working properly!\n";
-
-   //Testing the default constructor
-   Pixel t4;
-   assert (t4.getRed() == 0);
-   assert (t4.getGreen() == 0);
-   assert (t4.getBlue() == 0);
-   cout << "\tDefault constructor is working properly!\n";
 
    //Testing the set function
    Pixel t3(1,1,1);
@@ -175,6 +175,5 @@ int main2() {
    cout << ". . . stream IO passed\n" << endl;
 
    cout << "All current tests passing!" << endl;
-   return 0; // This effectively terminates the program
-
+   return 0; // End the program (all memory should be freed)
 }
