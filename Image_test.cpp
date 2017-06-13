@@ -32,7 +32,8 @@ void test_basic_functionality()
     Image I;
     Pixel pix(0,0,0);
     assert (I.getWidth() == 100 && I.getHeight() == 100);
-    for (int i = 0; i < 100; i++) //For loop to test ALL the positions in the array
+    //For loop to test ALL the positions in the array
+    for (int i = 0; i < 100; i++) 
     {
         for (int j = 0; j < 100; j++)
         {
@@ -49,7 +50,8 @@ void test_basic_functionality()
     assert (I1.getMaxColor() == 255);
     assert (I1.getWidth() == 20);
     assert (I1.getHeight() == 20);
-    for (int i = 0; i < 20; i++) //For loop to test ALL the positions in the array
+    //For loop to test ALL the positions in the array
+    for (int i = 0; i < 20; i++) 
     {
         for (int j = 0; j < 20; j++)
         {
@@ -74,16 +76,20 @@ void test_basic_functionality()
 
     //Testing the set commands
     Image I2(20,20,35,81,24);
-    Pixel pix2(39,76,90); //New pixel used to test the changes
-    Pixel pix3(35,81,24); //Same as the I2 pixel, just to make assertions easier later
+    //New pixel used to test the changes
+    Pixel pix2(39,76,90); 
+    //Same as the I2 pixel, just to make assertions easier later
+    Pixel pix3(35,81,24); 
     I2.setPixel(3,8,pix2);
     assert (I2.getPixel(4,7) == pix3);
     assert (I2.getPixel(3,8) == pix2);
     cout << "\tSetpixel 'copier' function is working properly!\n";
 
     Image I3(20,20,79,200,155);
-    Pixel pix4(30,25,19);   //new pixel used to test changes
-    Pixel pix5(79,200,155); //Pixel used to test another position to verify it was not changed
+    //new pixel used to test changes
+    Pixel pix4(30,25,19); 
+    //Pixel used to test another position to verify it was not changed
+    Pixel pix5(79,200,155); 
     I3.setPixel(5,14,30,25,19);
     assert (I3.getPixel(5,14) == pix4);
     assert (I3.getPixel(18,3) == pix5);
@@ -209,7 +215,8 @@ void test_copy_constructor()
     assert (C3.getMaxColor() == 255);
     assert (C3.getWidth() == 73);
     assert (C3.getHeight() == 103);
-    for (int i = 0; i < C3.getWidth(); i++) //For loop to test ALL the positions in the array
+    //For loop to test ALL the positions in the array
+    for (int i = 0; i < C3.getWidth(); i++) 
     {
         for (int j = 0; j < C3.getHeight(); j++)
         {
@@ -233,7 +240,8 @@ void test_copy_constructor()
     assert (C4.getMaxColor() == 255);
     assert (C4.getWidth() == 50);
     assert (C4.getHeight() == 50);
-    for (int i = 0; i < C4.getWidth(); i++) //For loop to test ALL the positions in the array
+    //For loop to test ALL the positions in the array
+    for (int i = 0; i < C4.getWidth(); i++) 
     {
         for (int j = 0; j < C4.getHeight(); j++)
         {
@@ -261,7 +269,8 @@ void test_assignment_operator()
     assert (C2.getMaxColor() == 255);
     assert (C2.getWidth() == 100);
     assert (C2.getHeight() == 103);
-    for (int i = 0; i < C2.getWidth(); i++) //For loop to test ALL the positions in the array
+    //For loop to test ALL the positions in the array
+    for (int i = 0; i < C2.getWidth(); i++) 
     {
         for (int j = 0; j < C2.getHeight(); j++)
         {
@@ -295,4 +304,6 @@ int main()
    test_copy_constructor();
    test_assignment_operator();
    cout << ". . . copy constructor and assignment operator working properly!\n" << endl;
+
+   return 0; //Verifies that the program has terminated
 }
