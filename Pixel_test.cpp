@@ -6,6 +6,8 @@
 // Name: Kenny Jarnagin
 // Date: 2-4-17
 
+
+
 #include <cassert>
 #include <sstream>
 #include <iostream>
@@ -173,6 +175,6 @@ int main2() {
    cout << ". . . stream IO passed\n" << endl;
 
    cout << "All current tests passing!" << endl;
-   return 0;
+   return 0; // This effectively terminates the program
 
 }
