@@ -28,7 +28,7 @@ using namespace imagelab;
 //    setBlue
 void test_basic_functionality()
 {
-	//Testing the default constructor
+	//Testing the default constructor (values should be 0,0,0 according to header file)
    Pixel t4;
    assert (t4.getRed() == 0);
    assert (t4.getGreen() == 0);
@@ -70,8 +70,7 @@ void test_equality_inequality()
    assert (eq == eq1);
 
    Pixel eq2(13,55,32);
-   Pixel eq3(14,200,32);
-   assert (eq2 != eq3);
+   assert (eq2 == eq1);
    cout << "\tEquivalence operator is working properly!\n";
 
    //Testing inequivalence operator (even though I basically did this above)
@@ -156,7 +155,7 @@ void test_streamIO() {
 
 int main2() {
 
-   cout << "Ready to try some tests . . . " << endl;
+   cout << "Implementing Testing Files. . . \nDetecting Errors . . . " << endl;
 
    // TODO: Uncomment ONE test method call at a time, along with its cout line.
    //       Once that test function and the methods it is testing are fully
